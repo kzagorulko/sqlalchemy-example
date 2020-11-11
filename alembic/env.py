@@ -1,7 +1,11 @@
+# ### start insert
+
 import os
 import sys
 
 sys.path.append(os.getcwd())
+
+# ### end insert
 
 from logging.config import fileConfig
 
@@ -20,9 +24,13 @@ fileConfig(config.config_file_name)
 
 # add your model's MetaData object here
 # for 'autogenerate' support
+
+# ###  insert lines here start
 from main import Base, DB_URL
 target_metadata = Base.metadata
 config.set_main_option('sqlalchemy.url', str(DB_URL))
+# ###  insert lines here start
+
 # target_metadata = None
 
 # other values from the config, defined by the needs of env.py,
